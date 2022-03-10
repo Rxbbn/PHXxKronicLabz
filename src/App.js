@@ -43,9 +43,9 @@ export const StyledRoundButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 4px 0px -2px rgba(250, 250, 250, 0.3);
-  -webkit-box-shadow: 0px 4px 0px -2px rgba(250, 250, 250, 0.3);
-  -moz-box-shadow: 0px 4px 0px -2px rgba(250, 250, 250, 0.3);
+  box-shadow: 0px 2px 0px -1px rgba(250, 250, 250, 0.3);
+  -webkit-box-shadow: 0px 2px 0px -1px rgba(250, 250, 250, 0.3);
+  -moz-box-shadow: 0px 2px 0px -1px rgba(250, 250, 250, 0.3);
   :active {
     box-shadow: none;
     -webkit-box-shadow: none;
@@ -76,7 +76,7 @@ export const StyledLogo = styled.img`
 
 export const StyledImg = styled.img`
   box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border: 4px dashed var(--secondary);
+  border: 4px solid var(--secondary);
   background-color: var(--accent);
   border-radius: 100%;
   width: 200px;
@@ -99,7 +99,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click buy to mint your NFT.`);
+  const [feedback, setFeedback] = useState(`Select your total count then click below to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -130,7 +130,7 @@ function App() {
     setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
-      .mint(blockchain.account, mintAmount)
+      .mint( mintAmount)
       .send({
         gasLimit: String(totalGasLimit),
         to: CONFIG.CONTRACT_ADDRESS,
@@ -145,7 +145,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Opensea.io to view it.`
+          `MEOW!! the ${CONFIG.NFT_NAME} is now yours! go visit Phoenixplorer.com to view it.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -205,9 +205,9 @@ function App() {
           <StyledLogo alt={"logo"} src={"/config/images/logo.png"} />
         </a>
         <s.SpacerSmall />
-        <ResponsiveWrapper flex={1} style={{ padding: 24 }} test>
+        <ResponsiveWrapper flex={1} style={{ padding: 24}} test>
           <s.Container flex={1} jc={"center"} ai={"center"}>
-            <StyledImg alt={"example"} src={"/config/images/example.gif"} />
+            <StyledImg alt={"example"} src={"/config/images/kat1.jpg"} />
           </s.Container>
           <s.SpacerLarge />
           <s.Container
@@ -218,8 +218,8 @@ function App() {
               backgroundColor: "var(--accent)",
               padding: 24,
               borderRadius: 24,
-              border: "4px dashed var(--secondary)",
-              boxShadow: "0px 5px 11px 2px rgba(0,0,0,0.7)",
+              border: "4px solid var(--secondary)",
+              boxShadow: "0px -3px 20px 5px rgba(222, 122, 0, 0.8)",
             }}
           >
             <s.TextTitle
@@ -249,13 +249,13 @@ function App() {
             >
               <StyledButton
                 onClick={(e) => {
-                  window.open("/config/roadmap.pdf", "_blank");
+                  window.open("https://kronickatz.io", "_blank");
                 }}
                 style={{
                   margin: "5px",
                 }}
               >
-                Roadmap
+                Kronic Katz
               </StyledButton>
               <StyledButton
                 style={{
@@ -298,7 +298,7 @@ function App() {
                 <s.TextDescription
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  Excluding gas fees.
+                  Excluding gas, and not the kind you get after Taco Bell.
                 </s.TextDescription>
                 <s.SpacerSmall />
                 {blockchain.account === "" ||
@@ -388,7 +388,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "BUSY" : "BUY"}
+                        {claimingNft ? "Securing Katnip" : "Mint MEOW!"}
                       </StyledButton>
                     </s.Container>
                   </>
@@ -401,7 +401,7 @@ function App() {
           <s.Container flex={1} jc={"center"} ai={"center"}>
             <StyledImg
               alt={"example"}
-              src={"/config/images/example.gif"}
+              src={"/config/images/kat1.jpg"}
               style={{ transform: "scaleX(-1)" }}
             />
           </s.Container>

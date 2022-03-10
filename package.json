@@ -1,7 +1,7 @@
 {
-  "name": "the_stripes_nft_dapp",
+  "name": "Kroenixdapp",
   "version": "1.0.0",
-  "description": "The Stripes NFT minting dapp is a quick and easy way to connect your smart contract and start minting NFTs.",
+  "description": "Phoenix and Kronic NFT Launch.",
   "private": true,
   "dependencies": {
     "react": "^17.0.2",

@@ -14,7 +14,7 @@ export const Screen = styled.div`
 
 // Used for providing space between components
 export const SpacerXSmall = styled.div`
-  height: 8px;
+  height: 16px;
   width: 8px;
 `;
 

@@ -1,18 +1,18 @@
 {
-  "CONTRACT_ADDRESS": "0x0b18b900F7375AABDa00EEaC988116C33fb05BD2",
-  "SCAN_LINK": "https://polygonscan.com/token/0x0b18b900F7375AABDa00EEaC988116C33fb05BD2",
+  "CONTRACT_ADDRESS": "0x51Ac599DD55f8229f460A6bf306Fe05c58dAf25c",
+  "SCAN_LINK": "https://phoenixplorer.com/token/0x51Ac599DD55f8229f460A6bf306Fe05c58dAf25c",
   "NETWORK": {
-    "NAME": "Polygon",
-    "SYMBOL": "Matic",
-    "ID": 137
+    "NAME": "Phoenix",
+    "SYMBOL": "PHX",
+    "ID": 13381
   },
-  "NFT_NAME": "The Stripes NFT",
-  "SYMBOL": "TSNFT",
-  "MAX_SUPPLY": 992,
-  "WEI_COST": 4000000000000000000,
-  "DISPLAY_COST": 4,
+  "NFT_NAME": "Rise of the Kronic Phoenix",
+  "SYMBOL": "KROENIX",
+  "MAX_SUPPLY": 1000,
+  "WEI_COST": 60000000000000000000,
+  "DISPLAY_COST": 60,
   "GAS_LIMIT": 285000,
-  "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/the-stripes-nft",
+  "MARKETPLACE": "Phoenix",
+  "MARKETPLACE_LINK": "https://cryptophoenix.org/phoenix",
   "SHOW_BACKGROUND": true
 }
