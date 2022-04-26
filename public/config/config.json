@@ -10,7 +10,7 @@
   "SYMBOL": "KROENIX",
   "MAX_SUPPLY": 1000,
   "WEI_COST": 60000000000000000000,
-  "DISPLAY_COST": 60,
+  "DISPLAY_COST": 375,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Phoenix",
   "MARKETPLACE_LINK": "https://cryptophoenix.org/phoenix",
